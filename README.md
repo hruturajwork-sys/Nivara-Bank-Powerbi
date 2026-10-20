@@ -41,15 +41,15 @@ The scenario: leadership at a mid-sized Indian private bank (fictional) is worri
 
 ## 🖼️ Dashboard
 **1 · Overview**
-![Overview](screenshots/page1.png)
+![Overview]([screenshots/page1.png](https://github.com/hruturajwork-sys/Nivara-Bank-Powerbi/blob/main/page1.jpg))
 
 **2 · Credit Risk**
-![Credit Risk](screenshots/page2.png)
+![Credit Risk]([screenshots/page2.png](https://github.com/hruturajwork-sys/Nivara-Bank-Powerbi/blob/main/page2.jpg))
 
 **3 · Customers · Fraud · Service**
-![Customers Fraud Service](screenshots/page3.png)
+![Customers Fraud Service]([screenshots/page3.png](https://github.com/hruturajwork-sys/Nivara-Bank-Powerbi/blob/main/page3.jpg))
 
-📄 Full 3-page PDF: [Nivara_BankLTD.pdf](Nivara_BankLTD.pdf)
+📄 Full 3-page PDF: [Nivara_BankLTD.pdf]([Nivara_BankLTD.pdf](https://github.com/hruturajwork-sys/Nivara-Bank-Powerbi/blob/main/Nivara_Bank_Dashboard.pdf))
 
 ## 🔍 Key findings
 | Area | Finding |
