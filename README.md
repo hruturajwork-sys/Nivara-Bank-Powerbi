@@ -1,158 +1,218 @@
-# 🏦 Nivara Bank — Retail & SME Performance Dashboard
+# 🏦 Nivara Bank | Retail & SME Analytics
 
-**End-to-end Power BI project: credit risk · customer value · fraud · service SLAs**
+**Turning banking data into insights on credit risk, customer behaviour, fraud, and operational performance.**
 
-![Power BI](https://img.shields.io/badge/Power%20BI-F2C811?style=flat&logo=powerbi&logoColor=black)
-![DAX](https://img.shields.io/badge/DAX-14B8A6?style=flat)
-![Power Query](https://img.shields.io/badge/Power%20Query-134E4A?style=flat)
-![Data](https://img.shields.io/badge/Data-Synthetic-lightgrey?style=flat)
-
-[![Overview dashboard](page1.jpg)](page1.jpg)
-
-> ⚠️ **Synthetic data notice:** Nivara Bank Ltd. is a **fictional** bank. All data in this repository is **synthetic**, generated for learning and portfolio purposes. No real customer, bank or transaction data is used.
+![Power BI](https://img.shields.io/badge/Power_BI-Dashboard-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
+![DAX](https://img.shields.io/badge/DAX-Measures-0F766E?style=for-the-badge)
+![Power Query](https://img.shields.io/badge/Power_Query-Data_Cleaning-134E4A?style=for-the-badge)
+![Data](https://img.shields.io/badge/Dataset-Synthetic-64748B?style=for-the-badge)
 
 ---
 
-## 📌 About the project
-I built this dashboard to practise a full analytics workflow: take messy raw data, clean it, model it, and turn it into a dashboard that answers real business questions.
+## 📊 Dashboard at a glance
 
-The scenario: leadership at a mid-sized Indian private bank (fictional) is worried about **rising NPAs**, **fraud**, and **flat customer growth**. The dashboard shows where the risk is coming from and what to do about it.
+![Nivara Bank Overview Dashboard](image%20of%20dashboard/page1.jpg)
+
+> 💡 **The business problem:** How can a bank monitor loan quality, identify potential risk, understand customer behaviour, and improve operational performance using its data?
+
+I built this Power BI project around that question. The report brings together lending, transactions, customer information, and complaints to explore the areas a banking analytics team might investigate before making business decisions.
+
+📄 **[View / Download the Full Dashboard PDF](Nivara_Bank_Dashboard.pdf)**
+
+⚠️ **Data disclaimer:** Nivara Bank is fictional. All data is synthetic and used only for learning and portfolio purposes.
+
+---
+
+## 📌 Project snapshot
 
 | | |
 |---|---|
-| **Data** | 6 related tables · 5,000 customers · 3,200 loans · 166,559 transactions · 1,800 complaints |
-| **Tools** | Power BI Desktop · Power Query (M) · DAX |
-| **Output** | 3-page interactive dashboard answering 10 business questions |
-| **Headline result** | Gross NPA **4.15%**; Personal loans **~11.8%** |
+| 🏦 Industry | Retail and SME Banking |
+| 🎯 Focus | Credit Risk, Customer Analytics, Fraud & Service Quality |
+| 🛠️ Tools | Power BI, Power Query (M), DAX |
+| 📂 Data model | Customer, account, loan, transaction, branch, complaint and date tables |
+| 📈 Deliverable | Three-page interactive dashboard |
+| 🔍 Approach | Data cleaning → Data modelling → KPI development → Analysis → Recommendations |
 
-## ❓ Business questions answered
-| # | Question | Page |
-|---|---|---|
-| Q1 | How is the loan book split across products? | Overview |
-| Q2 | What is Gross NPA overall and by product? How much is on the early-warning list? | Overview · Credit Risk |
-| Q3 | Do credit score and EMI burden drive defaults? | Credit Risk |
-| Q4 | Which branches and regions lend big but recover badly? | Credit Risk |
-| Q5 | Which customer segments create the most value? | Customers · Fraud |
-| Q6 | Who is dormant or leaving? | Customers · Fraud |
-| Q7 | Where is the cross-sell gap? | Customers · Fraud |
-| Q8 | How do transactions trend, and through which channels? | Overview |
-| Q9 | Where and when does fraud happen? | Customers · Fraud |
-| Q10 | Are complaints resolved within SLA? | Customers · Fraud |
+## 🖥️ Explore the dashboard
 
-## 🖼️ Dashboard
-**1 · Overview**
-[![Overview dashboard](page1.jpg)](page1.jpg)
+### 01 — 📈 Banking Overview
 
-**2 · Credit Risk**
-[![Credit Risk](page2.jpg)](page2.jpg)
+![Banking Overview](image%20of%20dashboard/page1.jpg)
 
-**3 · Customers · Fraud · Service**
-[![Customers Fraud Service](page3.jpg)](page3.jpg)
+A high-level view of the loan portfolio and banking activity, designed to help users identify the areas that need a closer look.
 
-📄 **[Open the full 3-page PDF](Nivara_BankLTD.pdf)** · 
-📊 **[Download the Power BI file (.pbix)](Nivara_Bank_Dashboard.pbix)**
+**Questions explored**
+- How is the loan book distributed across products?
+- What is the overall Gross NPA rate?
+- How does transaction activity vary across channels and time?
 
-## 🔍 Key findings
-| Area | Finding |
-|---|---|
-| **Loan book** | ₹252 Cr live book. Home loans are ~64% of it and only ~2.4% bad |
-| **NPA** | Gross NPA **4.15%** (₹10.5 Cr). Personal loans run **~11.8%**: ~6% of the book but ~18% of all NPA |
-| **Drivers** | Credit score below 600 → **~20.9%** NPA vs ~1.0% at 750+. EMI above 50% of income → **~8.2%**, against ~1.7–2.3% when EMI is under 35% |
-| **Early warning** | **₹14.5 Cr** is 31–90 days past due (the next NPA wave) |
-| **Hotspots** | Hazratganj (~12.3%), Malviya Nagar, Hinjewadi. North × Personal is the worst region/product cell (~14.9%) |
-| **Fraud** | **35 per 10,000** debits. Midnight–5am is ~3% of volume but ~11% of fraud. Net Banking (53) and Mobile App (49) are highest |
-| **Customers** | Retail + SME create ~86% of value. Students are the most likely to go dormant or close (~14.7%). Only ~16% of Premium customers hold a fixed deposit |
-| **Service** | ~37% of resolved complaints miss SLA; Account Opening Delay is worst (~56%) |
+### 02 — 🛡️ Credit Risk Analysis
 
-## ✅ Recommendations
-1. **Cap EMI at 50% of income** and reprice or cut off scores below 650.
-2. **Start collections at 30 days past due** so the watch-list doesn't turn into NPA.
-3. **Add step-up authentication** for night-time, high-value online debits.
-4. **Student → salary-account journey** and a fixed-deposit campaign for Premium customers.
-5. **Fix onboarding delays** and review SLAs weekly at the slowest branches.
+![Credit Risk](image%20of%20dashboard/page2.jpg)
 
-## 🧱 Data model
-Star schema, with **one-to-many, single-direction** relationships:
-- `dim_customers` → `dim_accounts`, `fact_loan`, `dim_complaints`
-- `dim_accounts` → `fact_transaction`
-- `dim_branch` → `fact_loan`, `dim_complaints`
-- `dim_date` (calendar table) for monthly trends
+This page focuses on loan quality and the factors associated with higher reported NPA rates in the synthetic dataset.
 
-![Data model](screenshots/model.png)
+**Questions explored**
+- Which loan products contribute disproportionately to NPA?
+- How do credit score and EMI burden relate to loan performance?
+- Which branches and regions need further investigation?
+- How much exposure sits in overdue buckets?
 
-| Table | Rows | Role |
-|---|---|---|
-| `dim_customers` | 5,000 | profile, segment, credit score |
-| `dim_accounts` | 6,742 | deposit accounts, status, balance |
-| `dim_branch` | 24 | branch, city, region |
-| `dim_complaints` | 1,800 | complaints and SLA |
-| `fact_loan` | 3,200 | loans, outstanding, days past due |
-| `fact_transaction` | 166,559 | debits/credits, channel, fraud flag |
-| `dim_date` | 365 | calendar |
+### 03 — 👥 Customer Analytics & Fraud
 
-## 🧹 Data cleaning (Power Query)
-| Table | Issue found | Fix |
-|---|---|---|
-| customers | 40 duplicate customers | removed on `customer_id` |
-| customers | gender `M / male / FEMALE` | standardised to Male / Female |
-| customers | city case and spacing | trimmed, proper case |
-| customers | impossible ages (0, 118, 999) | replaced with the median age of the occupation |
-| customers | ~3% missing income | filled with occupation median |
-| customers | blank credit scores | **kept as "No score"** (new-to-credit, not an error) |
-| transactions | duplicate transaction IDs | removed |
-| transactions | negative amounts | corrected with absolute value |
-| transactions | blank merchant category | set to "Unknown" |
-| loans | blank interest rates | filled with the product median |
+![Customers and Fraud](image%20of%20dashboard/page3.jpg)
 
-## 📐 DAX highlights
-```DAX
-Gross NPA % = DIVIDE ( [NPA Cr], [Loan Book Cr] )
+This page connects customer behaviour and transaction monitoring with operational service quality.
 
-Bank GNPA % =
-CALCULATE ( [Gross NPA %], ALL ( fact_loan ), ALL ( dim_customers ), ALL ( dim_branch ) )
-
-Fraud per 10K = DIVIDE ( [Fraud Cases], [Debit Txns] ) * 10000
-
-Risk Colour = IF ( [Gross NPA %] > [Bank GNPA %], "#FF6B6B", "#14B8A6" )
-```
-**Design choices**
-- Gross NPA uses **outstanding amount**, not loan count, and excludes closed loans.
-- Fraud is compared as a **rate per 10,000 debits**, not a raw count, to avoid volume bias.
-- Blank credit scores are **not imputed**, because they mean "new to credit".
-- Colour measures drive conditional formatting: **coral = above the bank average, teal = below**.
-
-## 💡 Skills demonstrated
-Data cleaning · Data modelling (star schema) · DAX (`CALCULATE`, `ALL`, `SWITCH`, `DIVIDE`) · Dashboard design · Banking KPIs (NPA, DPD buckets, SMA) · Insight writing and recommendations
-
-## 📁 Repository structure
-```
-nivara-bank-powerbi/
-├── Nivara_Bank_Dashboard.pbix      ← open in Power BI Desktop (data included)
-├── Nivara_Bank_Dashboard.pbit      ← template (data not included)
-├── Nivara_BankLTD.pdf              ← 3-page PDF export
-├── screenshots/                    ← page1.png, page2.png, page3.png, model.png
-├── data/raw/                       ← synthetic CSVs (6 tables)
-├── cleaning_log.md
-└── README.md
-```
-
-## ▶️ How to open
-**Option A: the `.pbix` (easiest).** Download `Nivara_Bank_Dashboard.pbix` and open it in Power BI Desktop (free).
-
-**Option B: the template.** Open `Nivara_Bank_Dashboard.pbit`. When asked for `DataFolder`, enter the path to the downloaded `data/raw/` folder, ending with a backslash, for example `C:\Users\you\Downloads\nivara-bank-powerbi\data\raw\`.
-
-## ⚠️ Limitations
-- The data is synthetic, so real data would be noisier and need more validation.
-- One snapshot (30-Sep-2026): no roll-rate or time-trend analysis of NPA.
-- Branch-level NPA is lumpy on small books, so read it next to loan book size.
-- "Customer value" is a simple proxy: a 2.5% spread on deposits plus loan interest.
-
-## 🔭 What I'd add next
-Roll-rate analysis by month · provision coverage ratio · cost-to-income ratio · a SQL data layer · scheduled refresh.
-
-## 👤 Author
-**Hruturaj Sansare** · Aspiring Data Analyst
-🔗 [LinkedIn](https://www.linkedin.com/in/hruturaj-sansare-549b64350/) · 📧 [Hruturajwork@gmail.com](mailto:Hruturajwork@gmail.com)
+**Questions explored**
+- Which customer segments contribute the most estimated value?
+- Where might the bank have retention or cross-selling opportunities?
+- Which transaction channels and time periods show higher fraud rates?
+- Are complaints being resolved within the defined SLA?
 
 ---
-<sub>Nivara Bank Ltd. is fictional. All data is synthetic.</sub>
+
+## 🔎 Key findings
+
+The following figures are reported from the synthetic dataset used in this project.
+
+| 📍 Area | 📊 Finding | 💼 Why it matters |
+|---|---|---|
+| 🏠 Loan portfolio | Approximately ₹252 Cr in the reported live loan book | Helps establish portfolio concentration |
+| ⚠️ Gross NPA | 4.15%, approximately ₹10.5 Cr | Provides a headline view of reported stressed assets |
+| 💳 Personal loans | Reported NPA rate of approximately 11.8% | Highlights a product segment for deeper risk analysis |
+| 📉 Credit score | Approximately 20.9% NPA below a score of 600, versus 1.0% at 750+ | Shows an association worth investigating in credit-risk analysis |
+| 💰 EMI burden | Approximately 8.2% NPA when EMI exceeds 50% of income | Highlights the importance of assessing repayment affordability |
+| ⏳ Early warning | Approximately ₹14.5 Cr in the 31–90 days-past-due bucket | Provides a starting point for collections prioritisation |
+| 🔐 Fraud | Reported rate of 35 fraud cases per 10,000 debit transactions | Supports comparisons across channels with different transaction volumes |
+| 🎧 Customer service | Approximately 37% of resolved complaints reportedly missed SLA | Identifies an operational performance issue to investigate |
+
+*These are dataset-specific results, not actual bank performance figures. Associations do not establish causation.*
+
+## 💡 Business recommendations
+
+Based on the patterns observed, I identified five areas a banking team could investigate further:
+
+1. **Credit risk:** Review higher-NPA loan products and assess borrower affordability alongside credit scores before changing lending policies.
+2. **Collections:** Prioritise accounts showing early signs of delinquency and track whether overdue balances progress into more severe buckets.
+3. **Fraud monitoring:** Investigate unusual overnight transactions and high-risk digital activity; validate whether additional controls would be effective.
+4. **Customer growth:** Explore retention initiatives for customers showing dormancy signals and identify relevant cross-selling opportunities.
+5. **Service quality:** Break down SLA breaches by complaint category and branch to identify where process improvements may have the greatest impact.
+
+These are recommendations for further investigation, not validated interventions or live banking policies.
+
+---
+
+## 🧹 Data preparation & quality
+
+Before building the visuals, I worked on common data quality issues that can distort reporting.
+
+| Issue | Treatment |
+|---|---|
+| Duplicate customer records | Removed duplicates using the customer identifier |
+| Inconsistent category labels | Standardised gender and other category values |
+| Inconsistent city names | Trimmed spaces and standardised casing |
+| Invalid age values | Replaced using occupation-level median age, where applicable |
+| Missing income | Filled using occupation-level median values |
+| Missing credit scores | Retained as a separate “No score” category |
+| Duplicate transaction IDs | Removed duplicate records |
+| Missing merchant categories | Labelled as “Unknown” |
+| Missing interest rates | Filled using product-level median values |
+
+🔑 **Important modelling decision:** I retained missing credit scores as a separate category rather than automatically imputing them. Missing information can have business meaning and should not always be treated as a data error.
+
+## 🧱 Data model
+
+The report uses related fact and dimension tables to organise the data for analysis.
+
+| Table | Rows | Purpose |
+|---|---:|---|
+| `dim_customers` | 5,000 | Customer attributes and segmentation |
+| `dim_accounts` | 6,742 | Account status and balances |
+| `dim_branch` | 24 | Branch and regional attributes |
+| `dim_complaints` | 1,800 | Complaint details and SLA tracking |
+| `fact_loan` | 3,200 | Loan balances, status and days past due |
+| `fact_transaction` | 166,559 | Transaction activity, channels and fraud flags |
+| `dim_date` | 365 | Calendar-based reporting |
+
+The model uses one-to-many relationships where appropriate, with a calendar table supporting date-based analysis.
+
+## 🧮 DAX highlights
+
+A few examples of the measures and conditional formatting logic used in the report:
+
+**1. Gross NPA percentage**
+
+```DAX
+Gross NPA % =
+DIVIDE ( [NPA Cr], [Loan Book Cr] )
+```
+
+**2. Fraud cases per 10,000 debit transactions**
+
+```DAX
+Fraud per 10K =
+DIVIDE ( [Fraud Cases], [Debit Txns] ) * 10000
+```
+
+**3. Conditional risk colour**
+
+```DAX
+Risk Colour =
+IF (
+    [Gross NPA %] > [Bank GNPA %],
+    "#FF6B6B",
+    "#14B8A6"
+)
+```
+
+### 🎨 Reporting decisions
+
+- Gross NPA is measured using outstanding amounts rather than simply counting loans.
+- Fraud rates are normalised by debit transaction volume to improve channel comparisons.
+- Missing credit scores are retained as a separate category.
+- Conditional colours help distinguish values above and below the bank-level reference rate.
+
+---
+
+## 🚀 What this project demonstrates
+
+- 🧹 **Data preparation:** Cleaning inconsistent values, handling missing data and removing duplicates.
+- 🧱 **Data modelling:** Working with related fact and dimension tables.
+- 🧮 **DAX:** Creating measures for banking KPIs and conditional formatting.
+- 📊 **Visualisation:** Organising a multi-page report around business questions.
+- 🏦 **Banking analytics:** Analysing NPA, overdue exposure, transaction fraud and customer behaviour.
+- 💼 **Business thinking:** Connecting findings with practical areas for further investigation.
+
+## 🔭 What I would improve next
+
+There are several areas I would like to develop further:
+
+- Monthly NPA movement and roll-rate analysis.
+- Provision coverage and cost-to-income metrics.
+- SQL-based data preparation before Power BI.
+- More detailed customer profitability analysis.
+- Automated data refresh and reporting.
+
+## ⚠️ Limitations
+
+- The data is synthetic and may not reflect real banking distributions.
+- The analysis uses a snapshot dated 30 September 2026 and does not establish NPA trends over time.
+- Branch-level rates should be considered alongside portfolio size.
+- Customer value is an estimate based on simplified assumptions rather than a full profitability model.
+
+## ▶️ How to explore the project
+
+1. 📄 Open the [dashboard PDF](Nivara_Bank_Dashboard.pdf) to review the three report pages.
+2. 💻 Download the `.pbix` file from the repository and open it in Power BI Desktop.
+3. 🔍 Explore the visuals, filters, and measures to understand the analysis.
+
+## 👤 About me
+
+**Hruturaj Sansare**  
+Aspiring Data Analyst | Finance & Banking Analytics
+
+I am building practical skills in data analysis, with a focus on applying Python, SQL, Excel and Power BI to business problems in banking and financial services.
+
+🔗 [Connect with me on LinkedIn](https://www.linkedin.com/in/hruturaj-sansare-549b64350/) · [Email me](mailto:Hruturajwork@gmail.com)
