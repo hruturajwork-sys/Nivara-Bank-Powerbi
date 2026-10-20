@@ -41,7 +41,7 @@ The scenario: leadership at a mid-sized Indian private bank (fictional) is worri
 
 ## 🖼️ Dashboard
 **1 · Overview**
-![Overview]([screenshots/page1.png](https://github.com/hruturajwork-sys/Nivara-Bank-Powerbi/blob/main/page1.jpg))
+[![Overview dashboard](page1.jpg)](page1.jpg)
 
 **2 · Credit Risk**
 ![Credit Risk]([screenshots/page2.png](https://github.com/hruturajwork-sys/Nivara-Bank-Powerbi/blob/main/page2.jpg))
