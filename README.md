@@ -1,12 +1,6 @@
 # 🏦 Nivara Bank | Retail & SME Analytics
 
 **Exploring credit risk, customer behaviour, fraud patterns, and banking performance with Power BI.**
-
-![Power BI](https://img.shields.io/badge/Power%20BI-Dashboard-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
-![DAX](https://img.shields.io/badge/DAX-Measures-0F766E?style=for-the-badge)
-![Power Query](https://img.shields.io/badge/Power%20Query-Data%20Cleaning-134E4A?style=for-the-badge)
-![Synthetic Data](https://img.shields.io/badge/Data-Synthetic-64748B?style=for-the-badge)
-
 ---
 
 ## 📊 Dashboard Preview
