@@ -7,7 +7,7 @@
 ![Power Query](https://img.shields.io/badge/Power%20Query-134E4A?style=flat)
 ![Data](https://img.shields.io/badge/Data-Synthetic-lightgrey?style=flat)
 
-![Overview dashboard](screenshots/page1.png)
+[![Overview dashboard](page1.jpg)](page1.jpg)
 
 > ⚠️ **Synthetic data notice:** Nivara Bank Ltd. is a **fictional** bank. All data in this repository is **synthetic**, generated for learning and portfolio purposes. No real customer, bank or transaction data is used.
 
@@ -44,12 +44,13 @@ The scenario: leadership at a mid-sized Indian private bank (fictional) is worri
 [![Overview dashboard](page1.jpg)](page1.jpg)
 
 **2 · Credit Risk**
-![Credit Risk]([screenshots/page2.png](https://github.com/hruturajwork-sys/Nivara-Bank-Powerbi/blob/main/page2.jpg))
+[![Credit Risk](page2.jpg)](page2.jpg)
 
 **3 · Customers · Fraud · Service**
-![Customers Fraud Service]([screenshots/page3.png](https://github.com/hruturajwork-sys/Nivara-Bank-Powerbi/blob/main/page3.jpg))
+[![Customers Fraud Service](page3.jpg)](page3.jpg)
 
-📄 Full 3-page PDF: [Nivara_BankLTD.pdf]([Nivara_BankLTD.pdf](https://github.com/hruturajwork-sys/Nivara-Bank-Powerbi/blob/main/Nivara_Bank_Dashboard.pdf))
+📄 **[Open the full 3-page PDF](Nivara_BankLTD.pdf)** · 
+📊 **[Download the Power BI file (.pbix)](Nivara_Bank_Dashboard.pbix)**
 
 ## 🔍 Key findings
 | Area | Finding |
